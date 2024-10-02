@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzaria Online</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Pizzaria Online</h1>
+    </header>
+
+    <main>
+        <section class="menu">
+            <h2>Escolha sua Pizza</h2>
+            <div class="pizza-options">
+                <div class="pizza-item">
+                    <img src="images/margherita.png" alt="Pizza Margherita">
+                    <p>Margherita</p>
+                    <button class="add-pizza" data-pizza="Margherita">Adicionar</button>
+                </div>
+                <div class="pizza-item">
+                    <img src="images/pepperoni.png" alt="Pizza Pepperoni">
+                    <p>Pepperoni</p>
+                    <button class="add-pizza" data-pizza="Pepperoni">Adicionar</button>
+                </div>
+                <div class="pizza-item">
+                    <img src="images/quatro_queijos.png" alt="Pizza Quatro Queijos">
+                    <p>Quatro Queijos</p>
+                    <button class="add-pizza" data-pizza="Quatro Queijos">Adicionar</button>
+                </div>
+            </div>
+            
+            <form id="pizza-form">
+                <label for="size">Tamanho:</label>
+                <select id="size" required>
+                    <option value="" disabled selected>Selecione o tamanho</option>
+                    <option value="pequena" data-price="20">Pequena - R$20,00</option>
+                    <option value="media" data-price="30">Média - R$30,00</option>
+                    <option value="grande" data-price="40">Grande - R$40,00</option>
+                </select>
+
+                <label for="quantity">Quantidade:</label>
+                <input type="number" id="quantity" value="1" min="1" required>
+
+                <button type="button" id="add-to-cart">Adicionar ao Pedido</button>
+
+                <!-- Elemento para exibir a mensagem de erro -->
+                <p id="error-message" class="error"></p>
+            </form>
+        </section>
+
+        <section class="cart">
+            <h2>Seu Pedido</h2>
+            <ul id="cart-items"></ul>
+            <div class="total">
+                <strong>Total: R$<span id="total-price">0.00</span></strong>
+            </div>
+            <button id="place-order">Finalizar Pedido</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>Pizzaria Online &copy; 2024</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

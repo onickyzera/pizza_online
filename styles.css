@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    background-color: #ff5722;
+    color: white;
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.menu, .cart {
+    width: 45%;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h2 {
+    margin-bottom: 15px;
+}
+
+.pizza-options {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pizza-item {
+    text-align: center;
+    flex-basis: 30%;
+}
+
+.pizza-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.pizza-item p {
+    margin: 10px 0;
+}
+
+button {
+    background-color: #ff5722;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e64a19;
+}
+
+form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+select, input {
+    margin-bottom: 15px;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+ul {
+    list-style: none;
+    margin-bottom: 15px;
+}
+
+.total {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: right;
+}
+
+.cart ul {
+    padding-left: 0;
+}
+
+/* ... código anterior permanece o mesmo ... */
+
+/* Estilo para a mensagem de erro */
+.error {
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+    display: none;
+}
+
+.pizza-item.selected {
+    border: 3px solid #ff5722;
+    border-radius: 8px;
+    padding: 5px;
+}
