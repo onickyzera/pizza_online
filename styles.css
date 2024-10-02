@@ -108,8 +108,6 @@ ul {
     padding-left: 0;
 }
 
-/* ... código anterior permanece o mesmo ... */
-
 /* Estilo para a mensagem de erro */
 .error {
     color: red;
@@ -118,8 +116,49 @@ ul {
     display: none;
 }
 
-.pizza-item.selected {
-    border: 3px solid #ff5722;
-    border-radius: 8px;
-    padding: 5px;
+/* Responsividade */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu, .cart {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .pizza-options {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pizza-item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .pizza-item img {
+        width: 80%; /* Reduz o tamanho da imagem em telas menores */
+    }
+}
+
+/* Estilos adicionais para telas menores (telefones) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .pizza-item img {
+        width: 100%; /* Imagens de pizza ocupam toda a largura disponível */
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 8px;
+    }
+
+    .total {
+        font-size: 1rem;
+    }
 }
