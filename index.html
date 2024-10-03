@@ -33,13 +33,18 @@
             </div>
             
             <form id="pizza-form">
-                <label for="size">Tamanho:</label>
-                <select id="size" required>
-                    <option value="" disabled selected>Selecione o tamanho</option>
-                    <option value="pequena" data-price="20">Pequena - R$20,00</option>
-                    <option value="media" data-price="30">Média - R$30,00</option>
-                    <option value="grande" data-price="40">Grande - R$40,00</option>
-                </select>
+                <label>Tamanho:</label>
+                <div class="size-options">
+                    <label>
+                        <input type="radio" name="size" value="pequena" data-price="20"> Pequena - R$20,00
+                    </label>
+                    <label>
+                        <input type="radio" name="size" value="media" data-price="30"> Média - R$30,00
+                    </label>
+                    <label>
+                        <input type="radio" name="size" value="grande" data-price="40"> Grande - R$40,00
+                    </label>
+                </div>
 
                 <label for="quantity">Quantidade:</label>
                 <input type="number" id="quantity" value="1" min="1" required>

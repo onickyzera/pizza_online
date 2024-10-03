@@ -61,6 +61,13 @@ h2 {
     margin: 10px 0;
 }
 
+.size-options {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
 button {
     background-color: #ff5722;
     color: white;
@@ -116,6 +123,13 @@ ul {
     display: none;
 }
 
+/* Adicionar borda ao redor da pizza selecionada */
+.pizza-item.selected {
+    border: 3px solid #ff5722;
+    border-radius: 8px;
+    padding: 5px;
+}
+
 /* Responsividade */
 @media (max-width: 768px) {
     main {
@@ -136,6 +150,7 @@ ul {
     .pizza-item {
         width: 100%;
         margin-bottom: 20px;
+        /* Reaplicamos a borda no item selecionado para garantir que funcione */
     }
 
     .pizza-item img {
